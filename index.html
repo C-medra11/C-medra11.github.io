@@ -57,6 +57,9 @@
                     class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Servicios</a>
                 <a href="#nosotros"
                     class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Nosotros</a>
+                <a href="index-en.html"
+                    class="inline-block mt-4 lg:inline-block lg:mt-0 text-white font-bold border-b-2 border-red-500 mr-6 hover:text-red-400">
+                    (English)</a>
                 <a href="#contacto"
                     class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-900 hover:bg-white mt-4 lg:mt-0">Contacto</a>
             </div>
@@ -133,9 +136,9 @@
             <h2 class="text-3xl font-bold text-blue-900 mt-2 mb-6">InverSafe Score: La ciencia detrás de tu tranquilidad
             </h2>
             <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                No invertimos por instinto, lo hacemos con datos. Nuestro sistema de diagnóstico traduce los 
-                lineamientos de <strong>ACOPROVI</strong> en una métrica de seguridad del 0 al 100%, 
-                garantizando que tu esfuerzo desde el extranjero esté protegido por estándares institucionales.
+                No invertimos por instinto, lo hacemos con datos. Nuestro sistema de diagnóstico traduce los
+                lineamientos de <strong>ACOPROVI</strong> en una métrica de seguridad del 0 al 100%, garantizando que tu
+                esfuerzo desde el extranjero esté protegido por estándares institucionales.
             </p>
         </div>
     </section>
@@ -190,7 +193,7 @@
     <section id="contacto" class="container mx-auto px-6 py-20">
         <h2 class="text-4xl font-bold text-center text-blue-900 mb-12">Inicia tu Inversión Segura</h2>
         <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
-            <form action="https://formspree.io/f/xjgkqzrr" method="POST" class="space-y-6">
+            <form action="https://formspree.io/f/mojvozjn" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <input type="text" name="Nombre" placeholder="Tu Nombre Completo"
                         class="p-4 border rounded-lg w-full" required>
@@ -207,8 +210,26 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white text-center py-8">
-        <p>&copy; 2024 InverSafe RD. Todos los derechos reservados.</p>
+    <footer class="bg-gray-800 text-white text-center py-10">
+        <p class="font-bold text-lg mb-4 text-blue-400">InverSafe RD</p>
+        <p class="mb-6 opacity-75">&copy; 2026 Todos los derechos reservados.</p>
+
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/inversafe.rd/" target="_blank"
+                class="text-white hover:text-pink-500 transition duration-300">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+
+            <a href="https://wa.me/12894881117" target="_blank"
+                class="text-white hover:text-green-500 transition duration-300">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61585990388862" target="_blank"
+                class="text-white hover:text-blue-600 transition duration-300 transform hover:scale-110">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -242,6 +263,33 @@
             document.getElementById("nav-content").classList.toggle("hidden");
         }
     </script>
+    <a href="https://wa.me/18294881117?text=Hola%20InverSafe%20RD,%20me%20gustaría%20solicitar%20una%20auditoría%20para%20un%20proyecto%20inmobiliario."
+        class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110 animate-bounce-slow"
+        target="_blank">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <span class="absolute top-0 right-0 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-red-500"></span>
+        </span>
+    </a>
+
+    <style>
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+    </style>
 </body>
 
 </html>
