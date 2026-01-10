@@ -1,49 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InverSafe RD | Tu Inversión Segura en Dominicana</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Ajuste para que el texto resalte sobre las imágenes */
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
     </style>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-    <nav class="flex items-center justify-between flex-wrap bg-blue-900 p-6 fixed w-full z-10 top-0 shadow-lg">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal text-gray-900">
+
+    <nav class="flex items-center justify-between flex-wrap bg-blue-900 p-6 fixed w-full z-50 top-0 shadow-lg">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <span class="font-bold text-2xl tracking-tight">InverSafe RD</span>
         </div>
         <div class="block lg:hidden">
-            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-blue-200 border-blue-400 hover:text-white hover:border-white">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 border rounded text-blue-200 border-blue-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
             </button>
         </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
-            <div class="text-sm lg:flex-grow">
-            </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+            id="nav-content">
+            <div class="text-sm lg:flex-grow"></div>
             <div>
-                <a href="#servicios" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Servicios</a>
-                <a href="#nosotros" class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Nosotros</a>
-                <a href="#contacto" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-900 hover:bg-white mt-4 lg:mt-0">Contacto</a>
+                <a href="#servicios"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Servicios</a>
+                <a href="#nosotros"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">Nosotros</a>
+                <a href="#contacto"
+                    class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-900 hover:bg-white mt-4 lg:mt-0">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <div class="relative pt-24 min-h-screen flex items-center bg-blue-900">
-        <div class="absolute inset-0 z-0">
-            <img src="https://media.istockphoto.com/id/613319852/photo/caribbean-beach-song.jpg?s=1024x1024&w=is&k=20&c=0-q50-s0mIXOpIgDumq360XrCpkAH3oixIqDwirLNlU=" 
-                 class="w-full h-full object-cover opacity-60" 
-                 alt="Playa Dominicana">
+    <div class="relative h-screen overflow-hidden">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1692017827893-f97d95397b49?q=80&w=1260&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Playa Dominicana">
+                </div>
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1754455175670-e472e64e93cc?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                        alt=" Construcción en RD">
+                </div>
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2000"
+                        alt="Inversión Segura">
+                </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+            <div class="swiper-pagination"></div>
         </div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="bg-white bg-opacity-95 p-8 md:p-12 rounded-xl shadow-2xl max-w-lg text-center md:text-left border-l-8 border-blue-600">
-                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4 leading-tight">Invierte en RD con Ojos en la Isla</h1>
-                <p class="text-xl text-gray-700 mb-8 font-medium">Somos tu garantía contra estafas inmobiliarias. Supervisamos tu construcción y auditamos tus contratos para que inviertas desde el extranjero con total paz mental.</p>
-                <a href="#contacto" class="bg-blue-600 text-white font-bold py-4 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg text-lg inline-block">¡Protege mi Inversión Hoy!</a>
+
+        <div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+            <div class="container mx-auto px-6">
+                <div
+                    class="bg-white bg-opacity-95 p-8 md:p-12 rounded-xl shadow-2xl max-w-lg pointer-events-auto border-l-8 border-blue-600">
+                    <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4 leading-tight">Invierte en RD con Ojos
+                        en la Isla</h1>
+                    <p class="text-lg text-gray-700 mb-8 font-medium">Somos tu garantía contra estafas inmobiliarias.
+                        Supervisamos tu construcción y auditamos tus contratos desde el extranjero.</p>
+                    <a href="#contacto"
+                        class="bg-blue-600 text-white font-bold py-4 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg text-lg inline-block">¡Protege
+                        mi Inversión Hoy!</a>
+                </div>
             </div>
         </div>
     </div>
@@ -54,17 +109,20 @@
             <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:-translate-y-2 transition duration-300">
                 <i class="fas fa-file-contract text-6xl text-blue-500 mb-6"></i>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Auditoría Legal de Contratos</h3>
-                <p class="text-gray-600 leading-relaxed">Revisión exhaustiva de títulos, permisos y cláusulas abusivas antes de que firmes o pagues un centavo. Detectamos las letras pequeñas.</p>
+                <p class="text-gray-600 leading-relaxed">Revisión exhaustiva de títulos, permisos y cláusulas abusivas
+                    antes de pagar un centavo. Detectamos las letras pequeñas.</p>
             </div>
             <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:-translate-y-2 transition duration-300">
                 <i class="fas fa-hard-hat text-6xl text-blue-500 mb-6"></i>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Supervisión Física de Obra</h3>
-                <p class="text-gray-600 leading-relaxed">Visitas periódicas al terreno. Te enviamos fotos, videos y reportes reales de avance para confirmar que tu dinero se está invirtiendo, no desviando.</p>
+                <p class="text-gray-600 leading-relaxed">Visitas periódicas al terreno con reportes reales de avance
+                    para confirmar que tu dinero se está invirtiendo correctamente.</p>
             </div>
             <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:-translate-y-2 transition duration-300">
                 <i class="fas fa-shield-alt text-6xl text-blue-500 mb-6"></i>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Investigación de Constructoras</h3>
-                <p class="text-gray-600 leading-relaxed">Verificamos el historial, solvencia y reputación de la empresa. Sabemos quién cumple y quién tiene historial de proyectos abandonados.</p>
+                <p class="text-gray-600 leading-relaxed">Verificamos el historial y solvencia de la empresa. Sabemos
+                    quién cumple y quién tiene historial de proyectos abandonados.</p>
             </div>
         </div>
     </section>
@@ -72,9 +130,11 @@
     <section class="py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Metodología Exclusiva</span>
-            <h2 class="text-3xl font-bold text-blue-900 mt-2 mb-6">InverSafe Score: La ciencia detrás de tu tranquilidad</h2>
+            <h2 class="text-3xl font-bold text-blue-900 mt-2 mb-6">InverSafe Score: La ciencia detrás de tu tranquilidad
+            </h2>
             <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                No invertimos por instinto, lo hacemos con datos. Nuestro sistema de diagnóstico traduce los lineamientos de <strong>ACOPROVI</strong> en una métrica de seguridad del 0 al 100%, garantizando que tu esfuerzo desde el extranjero esté protegido por estándares institucionales.
+                No invertimos por instinto, lo hacemos con datos. Nuestro sistema de diagnóstico traduce los
+                lineamientos de <strong>ACOPROVI</strong> en una métrica de seguridad del 0 al 100%.
             </p>
         </div>
     </section>
@@ -84,60 +144,45 @@
             <h2 class="text-3xl font-bold text-blue-900 text-center mb-8">Calculadora de Riesgo InverSafe</h2>
             <div class="bg-white p-8 rounded-2xl shadow-xl border border-blue-100">
                 <p class="mb-6 text-gray-600">Selecciona los requisitos que cumple el proyecto que te interesa:</p>
-                
                 <div id="calculatorForm" class="space-y-4">
                     <label class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer transition">
                         <input type="checkbox" class="w-5 h-5 text-blue-600" data-points="40">
-                        <span class="ml-3 text-gray-700 font-medium">¿Tiene Título de Propiedad o Fideicomiso confirmado? (40%)</span>
+                        <span class="ml-3 text-gray-700 font-medium">¿Tiene Título de Propiedad o Fideicomiso
+                            confirmado? (40%)</span>
                     </label>
                     <label class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer transition">
                         <input type="checkbox" class="w-5 h-5 text-blue-600" data-points="25">
-                        <span class="ml-3 text-gray-700 font-medium">¿Cuenta con Licencia de Construcción del MIVED? (25%)</span>
+                        <span class="ml-3 text-gray-700 font-medium">¿Cuenta con Licencia de Construcción del MIVED?
+                            (25%)</span>
                     </label>
                     <label class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer transition">
                         <input type="checkbox" class="w-5 h-5 text-blue-600" data-points="20">
-                        <span class="ml-3 text-gray-700 font-medium">¿La constructora tiene más de 3 proyectos entregados? (20%)</span>
+                        <span class="ml-3 text-gray-700 font-medium">¿La constructora tiene más de 3 proyectos
+                            entregados? (20%)</span>
                     </label>
                     <label class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer transition">
                         <input type="checkbox" class="w-5 h-5 text-blue-600" data-points="15">
-                        <span class="ml-3 text-gray-700 font-medium">¿Has visto avance físico real en la obra? (15%)</span>
+                        <span class="ml-3 text-gray-700 font-medium">¿Has visto avance físico real en la obra?
+                            (15%)</span>
                     </label>
                 </div>
-
                 <div class="mt-8 p-6 bg-blue-900 text-white rounded-xl text-center">
                     <h3 class="text-xl font-semibold">Tu Nivel de Seguridad: <span id="scoreResult">0%</span></h3>
                     <p id="riskMessage" class="mt-2 text-blue-200 italic">Marca las opciones para evaluar.</p>
-                    <button onclick="window.location.href='#contacto'" class="mt-4 bg-white text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-blue-100 transition">
-                        Solicitar Auditoría Profesional
-                    </button>
+                    <button onclick="window.location.href='#contacto'"
+                        class="mt-4 bg-white text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-blue-100 transition">Solicitar
+                        Auditoría Profesional</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        const checkboxes = document.querySelectorAll('#calculatorForm input');
-        const scoreDisplay = document.getElementById('scoreResult');
-        const riskMessage = document.getElementById('riskMessage');
-
-        checkboxes.forEach(cb => {
-            cb.addEventListener('change', () => {
-                let total = 0;
-                checkboxes.forEach(c => { if(c.checked) total += parseInt(c.getAttribute('data-points')); });
-                
-                scoreDisplay.innerText = total + '%';
-                
-                if(total >= 90) { riskMessage.innerText = "Inversión con alto nivel de cumplimiento."; riskMessage.style.color = "#4ADE80"; }
-                else if(total >= 70) { riskMessage.innerText = "Riesgo Moderado. Se recomienda auditoría legal."; riskMessage.style.color = "#FACC15"; }
-                else { riskMessage.innerText = "ALERTA: Documentación insuficiente detectada."; riskMessage.style.color = "#F87171"; }
-            });
-        });
-    </script>
-
-    <section id="nosotros" class="bg-blue-900 py-20">
-        <div class="container mx-auto px-6 text-center text-white">
+    <section id="nosotros" class="bg-blue-900 py-20 text-white text-center">
+        <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-8">¿Por qué InverSafe RD?</h2>
-            <p class="text-xl leading-relaxed max-w-3xl mx-auto">Sabemos lo difícil que es ganar el dinero en el extranjero y el sueño que representa tener un techo propio en nuestra tierra. Nacimos para ser tus ojos y oídos, asegurando que ese sueño no se convierta en una pesadilla legal o financiera. Tu tranquilidad es nuestra misión.</p>
+            <p class="text-xl leading-relaxed max-w-3xl mx-auto">Sabemos lo difícil que es ganar el dinero en el
+                extranjero. Nacimos para ser tus ojos y oídos, asegurando que tu sueño no se convierta en una pesadilla
+                legal.</p>
         </div>
     </section>
 
@@ -146,31 +191,56 @@
         <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
             <form action="https://formspree.io/f/xjgkqzrr" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" name="Nombre" placeholder="Tu Nombre Completo" class="p-4 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                    <input type="text" name="Telefono" placeholder="Tu Teléfono / WhatsApp" class="p-4 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <input type="text" name="Nombre" placeholder="Tu Nombre Completo"
+                        class="p-4 border rounded-lg w-full" required>
+                    <input type="text" name="Telefono" placeholder="WhatsApp" class="p-4 border rounded-lg w-full"
+                        required>
                 </div>
-                <input type="email" name="Email" placeholder="Tu Correo Electrónico" class="p-4 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                <textarea name="Mensaje" placeholder="¿En qué proyecto estás interesado? ¿Qué dudas tienes?" rows="5" class="p-4 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-                <button type="submit" class="bg-blue-600 text-white w-full py-4 rounded-lg font-bold text-xl hover:bg-blue-700 transition duration-300 shadow-md">Solicitar Asesoría Gratuita</button>
+                <input type="email" name="Email" placeholder="Tu Correo" class="p-4 border rounded-lg w-full" required>
+                <textarea name="Mensaje" placeholder="¿En qué proyecto estás interesado?" rows="5"
+                    class="p-4 border rounded-lg w-full" required></textarea>
+                <button type="submit"
+                    class="bg-blue-600 text-white w-full py-4 rounded-lg font-bold text-xl hover:bg-blue-700 shadow-md transition">Solicitar
+                    Asesoría Gratuita</button>
             </form>
-            <p class="text-center text-gray-500 mt-6">Tus datos están seguros. Te contactaremos en menos de 24 horas.</p>
         </div>
     </section>
 
     <footer class="bg-gray-800 text-white text-center py-8">
         <p>&copy; 2024 InverSafe RD. Todos los derechos reservados.</p>
-        <div class="flex justify-center mt-4 space-x-4">
-            <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="#" class="hover:text-green-400"><i class="fab fa-whatsapp fa-lg"></i></a>
-        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Toggle para el menú en móviles
-        document.getElementById('nav-toggle').onclick = function(){
+        // Inicializar Slider
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        // Lógica Calculadora
+        const checkboxes = document.querySelectorAll('#calculatorForm input');
+        const scoreDisplay = document.getElementById('scoreResult');
+        const riskMessage = document.getElementById('riskMessage');
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                let total = 0;
+                checkboxes.forEach(c => { if (c.checked) total += parseInt(c.getAttribute('data-points')); });
+                scoreDisplay.innerText = total + '%';
+                if (total >= 90) { riskMessage.innerText = "Inversión con alto nivel de cumplimiento."; riskMessage.style.color = "#4ADE80"; }
+                else if (total >= 70) { riskMessage.innerText = "Riesgo Moderado. Se recomienda auditoría legal."; riskMessage.style.color = "#FACC15"; }
+                else { riskMessage.innerText = "ALERTA: Documentación insuficiente detectada."; riskMessage.style.color = "#F87171"; }
+            });
+        });
+
+        // Toggle Menú Móvil
+        document.getElementById('nav-toggle').onclick = function () {
             document.getElementById("nav-content").classList.toggle("hidden");
         }
     </script>
 </body>
+
 </html>
